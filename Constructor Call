@@ -1,0 +1,27 @@
+/**************************************
+         Constructor Call
+***************************************/
+
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+	int width, height;
+public:
+	Rectangle(int width, int height) {
+		cout << "Parametrized Constructor Call" << endl;
+		this->width = width;
+		this->height = height;
+	}
+	int area(void);
+};
+
+int Rectangle::area() {
+	return width * height;
+}
+int main()
+{
+	Rectangle rect(10, 20);
+	cout << rect.area() << endl;
+}
