@@ -1,0 +1,29 @@
+/****************************************************************
+		 Constructor Call Member initialization in constructors
+******************************************************************/
+
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+class Circle {
+	double radius;
+public:
+	Circle(double r) : radius(r) { }
+	double areaCir() { return radius * radius * 3.14159265; }
+};
+class Cylinder {
+	Circle base;
+	double height;
+public:
+	Cylinder(double r, double h) :base(r), height(h) {}
+	double area() {
+		return base.areaCir() * height;
+	}
+};
+int main()
+{
+	Cylinder c(10, 20);
+	cout << c.area();
+	return 0;
+}
