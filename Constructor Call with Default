@@ -1,0 +1,32 @@
+/****************************************************************
+		 Constructor Call with Default Constructor to initialize 
+*****************************************************************/
+
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+class Circle {
+	double radius;
+public:
+	Circle() {}
+	Circle(double r) : radius(r) { }
+	double circum() { return radius * radius * 3.14159265; }
+};
+class Cylinder {
+	Circle base;    //for this we have to call default constructor call 
+	double height;
+public:
+	Cylinder(double r, double h) {
+		base = r; height = h;
+	}
+	double area() {
+		return base.circum() * height;
+	}
+};
+int main()
+{
+	Cylinder c(10, 20);
+	cout << c.area();
+	return 0;
+}
