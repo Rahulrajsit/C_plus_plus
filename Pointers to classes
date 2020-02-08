@@ -1,0 +1,27 @@
+/*****************************************************************
+             Pointers to classes
+******************************************************************/
+
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+	int width, height;
+public:
+	Rectangle(int x, int y) :width(x), height(y) {}
+	int area() { return width * height; }
+};
+int main()
+{
+	Rectangle obj(10, 20);
+	Rectangle* p, * b, * a;
+	p = &obj;
+	b = new Rectangle(1, 20);
+	a = new Rectangle[2]{ {2,5}, {3,6} };
+
+	cout << "Area of Rectangle:" << p->area() << endl;
+	cout << "Area of Rectangle:" << b->area() << endl;
+	cout << "Area of Rectangle:" << a[0].area() << endl;
+	cout << "Area of Rectangle:" << a[1].area() << endl;
+	return 0;
+}
