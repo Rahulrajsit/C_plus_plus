@@ -1,0 +1,23 @@
+/*************************************************************
+             Size of Array Vector and List
+**************************************************************/
+#include<iostream>
+#include<list>
+#include<vector>
+#include<array>
+
+using namespace std;
+
+int main() {
+	list<int> first(3, 100);
+	list<int> second(3, 200);
+	vector<int> myvector(5);
+	array<int, 10> my;
+
+	cout << first.max_size() << endl;
+	cout << second.max_size() << endl;
+	cout << myvector.max_size() << endl;
+	cout << my.max_size() << endl;
+
+	return 0;
+}
