@@ -1,0 +1,68 @@
+// HashFunction.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include<vector>
+#include<list>
+
+using namespace std;
+
+int main()
+{
+	vector<vector<int>> r;
+	r = { {2,3,4,5},{5,7,6,5} };
+
+	for (int i = 0; i < r.size(); i++) {
+		for (int j = 0; j < r[i].size(); j++)
+			cout << r[i][j] << " ";
+		cout << endl;
+	}
+
+	cout << "\n=======VECTOR=======" << endl;
+	vector<int> r1 = { 10,20,30,40 };
+
+	cout << "\nUsing Iterator Before " << endl;
+	vector<int>::iterator itr;
+	for (itr = r1.begin(); itr != r1.end(); itr++) {
+		cout << *itr << ' ';
+	}
+
+	r1.push_back(50);
+	r1.push_back(150);
+
+	cout << "\nUsing Iterator After " << endl;
+	for (itr = r1.begin(); itr != r1.end(); itr++) {
+		cout << *itr << ' ';
+	}
+	r1.pop_back();
+
+	cout << "\n\nUsing for each loop" << endl;
+	for (int in : r1) {
+		cout << in << ' ';
+	}
+
+	cout << "\nUsing Iterator After " << endl;
+	for (itr = r1.begin(); itr != r1.end(); itr++) {
+		cout << ++ * itr << ' ';
+	}
+
+	cout << "\n\n=======LIST=======" << endl;
+
+	cout << "\nLIST Iterator " << endl;
+	list<int> r11 = { 210,210,210,320,430,540 };
+	for (int in : r11) {
+		cout << in << ' ';
+	}
+	cout << "\nFont:" << r11.front() << endl;
+	r11.unique();
+	r11.reverse();
+
+	cout << "\nLIST Iterator2 " << endl;
+	list<int>::iterator itr1;
+	for (itr1 = r11.begin(); itr1 != r11.end(); itr1++) {
+		cout << *itr1 << ' ';
+	}
+	cout << endl;
+
+	return 0;
+}
