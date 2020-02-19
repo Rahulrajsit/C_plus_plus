@@ -1,20 +1,21 @@
 # C_plus_plus
 
+# 1
                                                          STL
                                                      ----------
 1. Algorithms                                   2. Containers                                       3. Iterators
                                                 
                                         generic(Template work for any type of data)
-1.search()                                         1.vector()
-2.sort()                                           2.list()<--------------|
-3.binary_search()                                  3.forward_list()<------| SAME FUNCTION
-4.reverse()                                        4.deque()<-------------|
-5.concat()                                         5.priority_queue()
-6.copy()                                           6.stack()
-7.union(0                                          7.set()
-8.intersection()                                   8.multiset()
-9.merge()                                          9.map<KEY,VALUE>
-10.heap()                                          10.multimap<KEY,VALUE>
+# 1.1 search()                                       # 2.1 vector()
+# 1.2 sort()                                         # 2.2 list()<--------------|
+# 1.3 binary_search()                                # 2.3 forward_list()<------| SAME FUNCTION
+# 1.4 reverse()                                      # 2.4 deque()<-------------|
+# 1.5 concat()                                       # 2.5 priority_queue()
+# 1.6 copy()                                         # 2.6 stack()
+# 1.7 union()                                        # 2.7 set()
+# 1.8 intersection()                                 # 2.8 multiset()
+# 1.9 merge()                                        # 2.9 map<KEY,VALUE>
+# 1.10 heap()                                        # 2.10 multimap<KEY,VALUE>
 
 
 # 2
